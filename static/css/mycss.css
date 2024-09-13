@@ -3,6 +3,7 @@ html{
     font-family: "Times New Roman", Times, serif;
 }
 
+/*menu lateral (principal)*/
 #menu{
     position: fixed;
     top: 0;
@@ -39,6 +40,7 @@ html{
 	color: #9b725b;
 }
 
+/*pesquisar (template da caixa de pesquisa)*/
 #divBusca{
     background-color:#2F4F4F;
     border:solid 1px;
