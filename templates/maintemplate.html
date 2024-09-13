@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mycss.css') }}">
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Jeiny Katyares Xavier Morais, Leslie Emanuele Greuel e Maria Eduarda Zuttion" >
+    <meta name="keywords" content="Plantas Medicinais, Herbologia, Herbalismo">
+    <meta name="description" content="Medplant. Site com a proposta de estimular a reconexão das pessoas com a natureza, destacando o uso de plantas na culinária, resgatando o valor das práticas naturais, e oferecendo um recurso valioso para aqueles que buscam alternativas para melhorar sua saúde e bem-estar.">
+</head>
+<body>
+    <h1>MedPlant</h1>
+    <div id="menu">
+        <ul>
+            <li><a name="PaginaInicial" href="{{url_for("home") }}">Página Inicial</a></li>
+            <li><a name="SobreNós" href="{{url_for("about") }}">Sobre Nós</a></li>
+            <li><a name="Pesquisar" href="{{url_for("search") }}">Pesquisar</a></li>
+        </ul>
+    </div>
+
+    <section class="content">
+        <header> {% block header %}{% endblock %} </header>
+
+        {% block content %}{% endblock %}
+    </section>
+
+</body>
+</html>
