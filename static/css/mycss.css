@@ -14,15 +14,27 @@ html{
         width: 175px;
         float: left;
     }
-
-    ul{
-        list-style: none;
-        padding: 0;
-    }
-
-    li {
-        display: inline;
-        margin-right: 20px;
-    }
 }
 
+#menu ul li{
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #3f541a;
+    text-align: left;
+    list-style: none;
+
+}
+
+#menu a:link {
+    background:#556b2f;
+    color:#c4b8b1;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px;
+    display: block;
+    }
+
+    #menu a:hover {
+		background: #556b2f;
+		color: #9b725b;
+		}
