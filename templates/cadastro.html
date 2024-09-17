@@ -1,0 +1,37 @@
+{% extends 'maintemplate' %}
+
+{% block title %}
+MedPlant - Cadastro
+{% endblock %}
+
+{% block header %}
+Login
+{% endblock %}
+
+{% block content %}
+<div id="cadastrarplanta">
+    <form action="cadastrar">
+        <p>
+            Nome da Planta: <input type="text" name="plantname">
+        </p> 
+    
+        <p>
+            Nome científico: <input type="text" name="cientifico">
+        </p>
+
+        <p>
+            Informações nutricionais: <iput type="text" name="infonutri">
+        </p>
+    
+        <p>
+            Descrição: <input type="text" name="descricao">
+        </p>
+
+        <p>
+            Receitas: <input type="text" name="receitas">
+        </p>
+
+        <button>Cadastrar</button>
+    </form>
+</div>
+{% endblock %}

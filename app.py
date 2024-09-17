@@ -4,13 +4,15 @@ from pony.orm import *
 db = Database()
 app = Flask(__name__)
 
-class Pessoa(db.Entity):
-    username = Required(str)
-    email = Required(str)
-    password = Required()
+db.bind(provider='sqlite', filename='plantas.db', create_db=True)
+db.generate_mapping(create_tables=True)
 
-    def __str__(self):
-        return {self.username}
+class Planta(db.Entity):
+    nomedaplanta = Required(str)
+    nomecientífico = Required(str)
+    infonutri = Required(str)
+    descricao = Required(str)
+    receitas = Required(str)
 
 @app.route("/")
 def home():
@@ -23,3 +25,19 @@ def about():
 @app.route("/search")
 def search():
     return render_template("search.html")
+
+@app.route("/form")
+def form():
+    return render_template("cadastro.html")
+
+@app.route("/cadastrarplanta")
+def cadastrar():
+    nomeplanta=request.args.get("plantname")
+    nomecientifico=request.args.get("cientifico")
+    infonutri=request.args.get("infonutri")
+    descricao=request.args.get("descricao")
+    receitas=request.args.get("receitas")
+
+    with db_session:
+        p= Planta(nomeplanta=nomeplanta, nomecientifico=nomecientifico,infonutri=infonutri, descricao=descricao, receitas=receitas)
+        commit()
