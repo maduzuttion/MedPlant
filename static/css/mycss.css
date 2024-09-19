@@ -3,6 +3,10 @@ html{
     font-family: "Times New Roman", Times, serif;
 }
 
+h1{
+    color: #556b2f;
+}
+
 /*menu lateral (principal)*/
 #menu{
     position: fixed;
@@ -10,11 +14,11 @@ html{
     left: 0;
     width: 100%;
     background-color: #556b2f;
+}
 
-    .sidebar {
-        width: 175px;
-        float: left;
-    }
+#menu .sidebar {
+    width: 175px;
+    float: left;
 }
 
 #menu ul li{
@@ -41,7 +45,7 @@ html{
 }
 
 /*pesquisar (template da caixa de pesquisa)*/
-#divBusca{
+#pesquisar{
     background-color:#2F4F4F;
     border:solid 1px;
     border-radius:15px;

@@ -1,16 +1,22 @@
 {% extends 'maintemplate' %}
 
+<!--Titulo da página-->
 {% block title %}
 MedPlant - Cadastro
 {% endblock %}
 
+<!--Bloco do header-->
 {% block header %}
 Login
 {% endblock %}
 
+<!--Bloco de conteúdo-->
 {% block content %}
+<!--Formulário para cadastro de nova planta no Banco de dados-->
 <div id="cadastrarplanta">
+    <!--Chamado da rota cadastrar-->
     <form action="cadastrar">
+        <!--inputs necessários para preenchimento de informações de cadastro-->
         <p>
             Nome da Planta: <input type="text" name="plantname">
         </p> 
@@ -25,6 +31,10 @@ Login
     
         <p>
             Descrição: <input type="text" name="descricao">
+        </p>
+
+        <p>
+            Indicações: <input type="text" name="indicacoes">
         </p>
 
         <p>

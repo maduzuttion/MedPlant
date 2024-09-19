@@ -1,25 +1,27 @@
 {% extends 'maintemplate' %}
 
+<!--Titulo da página-->
 {% block title %}
 MedPlant - Pesquisar
 {% endblock %}
 
+<!--Bloco do header-->
 {% block header %}
 {% endblock %}
 
+<!--Bloco de conteúdo-->
 {% block content %}
-
+<!--Pesquisar-->
 <div id="pesquisar">
-    <input type="text" id="txtBusca" placeholder="Buscar..."/>
+    <form action="pesquisar">
+        <input type="text" id="txtBusca" placeholder="Buscar..."/>
+    </form>
 </div>
 
 <hr>
 
 <div id="catalogo">
-    <ul>
-        <!--Lista de plantas aleatórias-->
-        <li><a href=""></a></li>
-    </ul>
+    <!--Lista de plantas selecionada aleatóriamente-->
 </div>
 
 {% endblock %}
